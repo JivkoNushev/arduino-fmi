@@ -6,9 +6,6 @@
 #include "config.h"
 
 class Elevator {
-private:
-    static const constexpr uint32_t FLOOR_COUNT = 3;
-
 public:
     Elevator(ElevatorButtons& callers) :
         enable_pin(MOTOR_ENABLE_PIN),
@@ -20,9 +17,9 @@ public:
     void begin() {
         pinMode(this->enable_pin, OUTPUT);
 
-        this->driver.setMaxSpeed(1000);
-        this->driver.setAcceleration(50);
-        this->driver.setSpeed(200);
+        this->driver.setMaxSpeed(MOTOR_MAX_SPEED);
+        this->driver.setAcceleration(MOTOR_ACCELERATION);
+        this->driver.setSpeed(MOTOR_SPEED);
 
         this->state = State::TURN_OFF;
     }

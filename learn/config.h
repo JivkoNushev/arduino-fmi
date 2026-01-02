@@ -1,9 +1,14 @@
 #pragma once
 
+#define SERIAL_BAUDRATE         115200
+
 #define MOTOR_ENABLE_PIN        2
 #define MOTOR_DIR_PIN           3
 #define MOTOR_STEP_PIN          4
 #define MOTOR_INTERFACE_TYPE    1
+#define MOTOR_MAX_SPEED         1000
+#define MOTOR_ACCELERATION      50
+#define MOTOR_SPEED             200
 
 #define ELEVATOR_WAIT_TIME_MS   5000
 #define ELEVATOR_FLOOR1_POS     0
